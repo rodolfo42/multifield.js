@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Mulfield Sample</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <style type="text/css">
+    .mfItem {
+        border-bottom: 1px solid #DDD;
+        margin-top: 10px;
+    }
+    .mfItem:last-child {
+        border-bottom: 0 !important;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="span10">
+			<h3>Entre com os dados abaixo</h3>
+		</div>
+		<div class="span2">
+			<a class="btn btn-success pull-right mfAddSwitch" rel="FieldsContainer" title="Clique para adicionar uma linha" data-placement="left" style="margin-top: 15px;"><i class="icon-white icon-plus"></i></a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span12">
+			<form action="#foobar" method="GET">
+				<div id="FieldsContainer" class="mfContainer" data-max-fields="10">
+					<div class="controls controls-row mfTemplate">
+						<input type="text" class="span1" maxlength="5" placeholder="field1" name="field1[]" />
+						<input type="text" class="span4" maxlength="6" placeholder="field2" name="field2[]" />
+						<div class="input-prepend span2">
+							<span class="add-on">R$</span><input class="input-small valor" type="text" maxlength="18" placeholder="field3" name="field3[]" />
+						</div>
+						<div class="input-prepend span2">
+							<span class="add-on">R$</span><input class="input-small valor" type="text" maxlength="18" placeholder="field4" name="field4[]" />
+						</div>
+						<div class="span3">
+							<a class="btn btn-danger pull-right mfRemoveSwitch"><i class="icon-white icon-minus"></i></a>
+						</div>
+					</div>
+				</div>
+				<div style="margin-top: 10px; overflow: hidden;">
+					<button type="submit" class="btn btn-large btn-primary pull-right">Enviar <i class="icon-white icon-arrow-right"></i></button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- scripts -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="multifield.js"></script>
+<script type="text/javascript">
+$('.mfAddSwitch').tooltip();
+</script>
+</body>
+</html>
